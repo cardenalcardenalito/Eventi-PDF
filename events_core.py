@@ -31,7 +31,7 @@ IT_LOWER_WORDS = {
 CSS = """
 @page {
     size: A4;
-    margin: 10mm 0mm 20mm 0mm;
+    margin: 10mm 5mm 20mm 5mm;
 }
 body {
     font-family: "DejaVu Sans", Arial, sans-serif;
@@ -55,8 +55,8 @@ body {
 }
 .day-block {
     margin-top: 22px;
-    margin-left: 4px;
-    margin-right: 4px;
+    margin-left: 0px;
+    margin-right: 0px;
 }
 .day-block:first-of-type {
     margin-top: 0;
@@ -72,7 +72,7 @@ body {
     page-break-after: avoid;
 }
 .day-events {
-    margin-left: 90px;
+    margin-left: 110px;
 }
 .event {
     padding: 12px 0;
