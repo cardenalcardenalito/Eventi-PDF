@@ -55,8 +55,8 @@ body {
 }
 .day-block {
     margin-top: 22px;
-    margin-left: 2px;
-    margin-right: 2px;
+    margin-left: 0px;
+    margin-right: 0px;
 }
 .day-block:first-of-type {
     margin-top: 0;
