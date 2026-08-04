@@ -31,7 +31,7 @@ IT_LOWER_WORDS = {
 CSS = """
 @page {
     size: A4;
-    margin: 10mm 18mm 20mm 18mm;
+    margin: 10mm 0mm 20mm 0mm;
 }
 body {
     font-family: "DejaVu Sans", Arial, sans-serif;
