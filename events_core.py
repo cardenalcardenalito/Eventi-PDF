@@ -55,8 +55,8 @@ body {
 }
 .day-block {
     margin-top: 22px;
-    margin-left: 4px;
-    margin-right: 4px;
+    margin-left: 2px;
+    margin-right: 2px;
 }
 .day-block:first-of-type {
     margin-top: 0;
@@ -66,7 +66,7 @@ body {
     font-weight: bold;
     font-size: 12pt;
     text-align: left;
-    padding: 3px 0;
+    padding: 1px 2px;
     margin: 0 0 8px 0;
     break-after: avoid;
     page-break-after: avoid;
