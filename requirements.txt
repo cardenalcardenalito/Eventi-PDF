@@ -1,0 +1,3 @@
+streamlit
+weasyprint
+python-dateutil
