@@ -66,7 +66,7 @@ body {
     font-weight: bold;
     font-size: 12pt;
     text-align: left;
-    padding: 1px 30px;
+    padding: 1px 3px;
     margin: 0 0 8px 0;
     break-after: avoid;
     page-break-after: avoid;
