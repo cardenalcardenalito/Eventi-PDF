@@ -28,23 +28,23 @@ title_text = st.text_input(
 )
 
 csv_file = st.file_uploader("File CSV degli eventi", type=["csv"])
-logo_file = st.file_uploader(
-    "Logo del Comune (opzionale)", type=["png", "jpg", "jpeg"]
+logo_files = st.file_uploader(
+    "Loghi (opzionale)", type=["png", "jpg", "jpeg"], accept_multiple_files=True
 )
 fix_caps = st.checkbox(
     "Correggi automaticamente il testo scritto in MAIUSCOLO", value=True
 )
 
 if csv_file is not None:
-    logo_data_uri = None
-    if logo_file is not None:
-        mime = "image/png" if logo_file.type == "image/png" else "image/jpeg"
-        b64 = base64.b64encode(logo_file.read()).decode("ascii")
-        logo_data_uri = f"data:{mime};base64,{b64}"
+    logo_data_uris = []
+    for f in logo_files:
+        mime = "image/png" if f.type == "image/png" else "image/jpeg"
+        b64 = base64.b64encode(f.read()).decode("ascii")
+        logo_data_uris.append(f"data:{mime};base64,{b64}")
 
     try:
         full_html = build_full_html(
-            csv_file.read(), title_text, logo_data_uri, fix_caps=fix_caps
+            csv_file.read(), title_text, logo_data_uris, fix_caps=fix_caps
         )
     except Exception as e:
         st.error(f"Errore nella lettura del CSV: {e}")
