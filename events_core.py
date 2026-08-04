@@ -55,6 +55,8 @@ body {
 }
 .day-block {
     margin-top: 22px;
+    margin-left: 10px;
+    margin-right: 10px;
 }
 .day-block:first-of-type {
     margin-top: 0;
@@ -70,7 +72,7 @@ body {
     page-break-after: avoid;
 }
 .day-events {
-    margin-left: 66px;
+    margin-left: 100px;
 }
 .event {
     padding: 12px 0;
@@ -98,11 +100,13 @@ body {
 }
 .time-cell {
     width: 20%;
+    font-weight: bold;
     text-align: left;
     white-space: nowrap;
 }
 .place-cell {
     width: 28%;
+    font-weight: bold;
     text-align: left;
 }
 .icon {
@@ -116,12 +120,12 @@ body {
     white-space: nowrap;
 }
 .description {
-    margin-top: 8px;
+    margin-top: 16px;
     font-size: 10pt;
     color: #262626;
 }
 .organizer {
-    margin-top: 6px;
+    margin-top: 12px;
     font-size: 10pt;
     font-weight: bold;
 }
@@ -248,10 +252,10 @@ def format_date_it(d):
 # ---------------------------------------------------------------------------
 
 def build_event_html(row, fix_caps=True):
-    title = get_field(row, "title", "titolo", "event", "nome")
+    title = get_field(row, "title", "titolo dell'evento", "event", "nome")
     time_raw = get_field(row, "time", "ora", "orario")
     place = get_field(row, "location", "luogo", "place", "venue")
-    desc = get_field(row, "description", "descrizione", "desc")
+    desc = get_field(row, "description", "descrizione dell'evento", "desc")
     organizer = get_field(row, "organizer", "organizzatore", "organizzato da")
 
     if fix_caps:
