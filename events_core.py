@@ -332,8 +332,8 @@ def build_full_html(csv_bytes, title_text, logo_data_uris=None, fix_caps=True):
     if logo_data_uris:
       imgs = "".join(f'<img src="{uri}">' for uri in logo_data_uris)
       logo_html = f'<div class="logos">{imgs}</div>'
-else:
-    logo_html = ""
+    else:
+      logo_html = ""
 
     return f"""<!DOCTYPE html>
 <html>
