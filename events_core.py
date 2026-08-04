@@ -43,10 +43,15 @@ body {
     text-align: center;
     margin-bottom: 22px;
 }
-.header img {
+.header .logos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 10px;
+}
+.header .logos img {
     height: 65px;
-    display: block;
-    margin: 0 auto 10px auto;
 }
 .header h1 {
     font-size: 16pt;
@@ -291,7 +296,7 @@ def build_event_html(row, fix_caps=True):
     """
 
 
-def build_full_html(csv_bytes, title_text, logo_data_uri=None, fix_caps=True):
+def build_full_html(csv_bytes, title_text, logo_data_uris=None, fix_caps=True):
     """csv_bytes: raw bytes of the uploaded CSV. Returns a full HTML document string."""
     text = csv_bytes.decode("utf-8-sig")
     reader = csv.DictReader(io.StringIO(text))
@@ -324,7 +329,11 @@ def build_full_html(csv_bytes, title_text, logo_data_uri=None, fix_caps=True):
         </div>
         """)
 
-    logo_html = f'<img src="{logo_data_uri}">' if logo_data_uri else ""
+    if logo_data_uris:
+    imgs = "".join(f'<img src="{uri}">' for uri in logo_data_uris)
+    logo_html = f'<div class="logos">{imgs}</div>'
+else:
+    logo_html = ""
 
     return f"""<!DOCTYPE html>
 <html>
