@@ -55,8 +55,8 @@ body {
 }
 .day-block {
     margin-top: 22px;
-    margin-left: 10px;
-    margin-right: 10px;
+    margin-left: 4px;
+    margin-right: 4px;
 }
 .day-block:first-of-type {
     margin-top: 0;
@@ -66,13 +66,13 @@ body {
     font-weight: bold;
     font-size: 12pt;
     text-align: left;
-    padding: 6px 0;
-    margin: 0 0 4px 0;
+    padding: 3px 0;
+    margin: 0 0 8px 0;
     break-after: avoid;
     page-break-after: avoid;
 }
 .day-events {
-    margin-left: 100px;
+    margin-left: 90px;
 }
 .event {
     padding: 12px 0;
@@ -99,13 +99,13 @@ body {
     text-align: left;
 }
 .time-cell {
-    width: 20%;
+    width: 15%;
     font-weight: bold;
     text-align: left;
     white-space: nowrap;
 }
 .place-cell {
-    width: 28%;
+    width: 33%;
     font-weight: bold;
     text-align: left;
 }
@@ -114,7 +114,7 @@ body {
     width: 12px;
     height: 12px;
     vertical-align: -1px;
-    margin-right: 3px;
+    margin-right: 6px;
 }
 .time-line {
     white-space: nowrap;
