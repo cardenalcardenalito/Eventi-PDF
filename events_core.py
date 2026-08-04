@@ -252,10 +252,10 @@ def format_date_it(d):
 # ---------------------------------------------------------------------------
 
 def build_event_html(row, fix_caps=True):
-    title = get_field(row, "title", "titolo dell'evento", "event", "nome")
+    title = get_field(row, "title", "titolo", "event", "nome")
     time_raw = get_field(row, "time", "ora", "orario")
     place = get_field(row, "location", "luogo", "place", "venue")
-    desc = get_field(row, "description", "descrizione dell'evento", "desc")
+    desc = get_field(row, "description", "descrizione", "desc")
     organizer = get_field(row, "organizer", "organizzatore", "organizzato da")
 
     if fix_caps:
